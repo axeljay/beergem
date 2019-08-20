@@ -4,7 +4,11 @@ class BeersController < ApplicationController
   end
 
   def show
+<<<<<<< HEAD
     #@beer = Beer.find(params[:id]
+=======
+    # @beer = Beer.find(params[:id]
+>>>>>>> 3c8fac6258d4ac77dec9d0dce85b61dcfbf52360
   end
 
   def new
