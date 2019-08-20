@@ -232,6 +232,20 @@
 			display: block;
 		}
 	}
+
+    .figure {
+      position: relative;
+    }
+
+  .caption  {
+    color: white;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    width: 100%;
+    font-size: 600%;
+  }
+
 </style>
 <script type="text/javascript">
 	// Prevent dropdown menu from closing when click inside the form
@@ -330,43 +344,14 @@
 </nav>
 </body>
 
-<!--
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">BeerGem</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Beer</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Country</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Guide</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav> -->
-
-
 <br />
 
 <div class="container">
 <img src="<%=image_url("craftbeer.jpg") %>" class="img-fluid" alt="Responsive image">
 </div>
 <br />
-
+<br />
+<h1 style="text-align: center;">Top 10 beers</h1>
 <!-- Containers for IPA, PALE ALE & STOUTS -->
 <div class="container">
   <div class="row">
@@ -375,6 +360,9 @@
       <figure class="figure">
         <img src="<%=image_url("ipa.jpg") %>" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
         <figcaption class="figure-caption"></figcaption>
+        <div class="caption">
+        <p>IPA</p>
+        </div>
       </figure>
     </div>
 
@@ -382,6 +370,8 @@
       <figure class="figure">
         <img src="<%=image_url("lager.jpg") %>" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
         <figcaption class="figure-caption"></figcaption>
+        <div class="caption">
+        <p>Lager</p>
     </figure>
     </div>
 
@@ -389,6 +379,8 @@
       <figure class="figure">
         <img src="<%=image_url("stout.jpg") %>" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
         <figcaption class="figure-caption"></figcaption>
+        <div class="caption">
+        <p>Stout</p>
       </figure>
     </div>
   </div>
