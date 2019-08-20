@@ -1,70 +1,43 @@
-class UsersController < ApplicationController
-
+class CustomersController < ApplicationController
   def index
-    puts user_session
-    @beers = Beer.all
-    respond_to do |format|
-    format.html # index.html.erb
-    format.json { render json: @beer }
-
   end
 
   def show
-    @beer = Beer.find(params[:id])
-    if user_signed_in?
-      @message = "Hey there"
-
-    else
-      @message = "You are not logged out"
-    end
-
-      respond_to do |format|
-      format.html
-      format.json { render json: @beer }
-    end
+    @user = User.find(params[:id])
   end
 
   def new
-    @beer = Beer.new
+    @beer = Beer.all
+  end
+
+  def create
+    @user = User.new(post_params)
+    @user.save
+    redirect_to @user
   end
 
   def edit
-    @been = Beer.find(params[:id])
+    @user = User.find(params[:id])
+    @beer = Beer.all
   end
-
-
-  def create
-    @beer = Beer.new(beer_params)
-
-    @beer.user = current_user
-
-    if @beer.save
-      redirect_to @beer
-    else
-      render 'new'
-    end
-  end
-
 
   def update
-    @beer = Beer.find(params[:id])
+    @user = User.find(params[:id])
 
-    if @beer.update(article_params)
-      redirect_to @beer
-    else
-      render 'edit'
-    end
+    @User.update(post_params)
+    redirect_to @user
   end
 
   def destroy
-    @beer = Beer.find(params[:id])
-    @beer.destroy
+    @user = User.find(params[:id])
 
-    redirect_to articles_path
+    @user.destroy
+    redirect_to root_path
   end
 
-  private
-    def song_params
-      params.require(:beer).permit(:name)
-    end
+private
+  def post_params
+    params.require(:user).permit(:name, :beer_ids => [])
+  end
+
 end
