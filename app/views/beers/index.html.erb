@@ -4,10 +4,10 @@
     <p>
         <h3>Name: <%= beer.title %></h3>
         <ul>
-        <li><h4>The description of the beer is <%= beer.description %></h4>
+        <li><h4><%= beer.description %></h4>
         <li><h4>This beer's is from <%= beer.country %></h4>
         <li><h4>This beer's style is <%= beer.style %></h4>
-        <li><h4>Image <%= beer.image %></h4>
+        <li><img src=<%= beer.image %> style ="height:100px; width:60px;">
         </ul>
     </p>
     <br/>
