@@ -8,3 +8,4 @@ class Beers < ActiveRecord::Migration[5.2]
     t.string :image
   end
 end
+end
