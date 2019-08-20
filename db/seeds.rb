@@ -6,7 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Beer.destroy_all
-
 Beer.create(title: "Hop Valley Citrus Mistress", description: "The Hop Valley Citrus Mistress IPA features 6 different hops with multiple flavours and aromas complimented with the addition of grapefruit peel. It creates a bouquet of citrus, peach and tropical fruits with enough Munich malt to produce a classic burnt orange flavour that's worthy of its name.", country: "Eugene, Oregon, United States", style:"IPA", image:"https://res.cloudinary.com/ratebeer/image/upload/e_trim:1/d_beer_img_default.png,f_auto/beer_225058")
 Beer.create(title: "Cigar City Humidor Series", description: "The Humidor Series is a rotating offering of Cigar City Brewing beer aged on Spanish cedar.", country: "Tampa, Florida, United States", style:"IPA", image:"https://res.cloudinary.com/ratebeer/image/upload/e_trim:1/d_beer_img_default.png,f_auto/beer_102863")
 Beer.create(title: "Ballast Point Grapefruit Sculpin", description: "Our Grapefruit Sculpin is the latest take on our signature IPA. Some may say there are few ways to improve Sculpin’s unique flavor, but the tart freshness of grapefruit perfectly complements our IPA’s citrusy hop character. Grapefruit’s a winter fruit, but this easy-drinking ale tastes like summer.", country: "San Diego, California, United States", style:"IPA", image:"https://res.cloudinary.com/ratebeer/image/upload/e_trim:1/d_beer_img_default.png,f_auto/beer_213365")
@@ -17,4 +16,10 @@ Beer.create(title: "3 Sheeps Hello My Name is Joe", description: "We at 3 Sheeps
 Beer.create(title: "Marz Jungle Boogie", description: "Jungle Boogie is an American Wheat beer with just enough complex malt character to balance the juicy Mosaic hops and rooibos tea flavors.", country: "Chicago, Illinois, United States", style:"Wheat Ale", image:"https://res.cloudinary.com/ratebeer/image/upload/e_trim:1/d_beer_img_default.png,f_auto/beer_303531")
 Beer.create(title: "Cellarmaker Bucket of Truth", description: "This hoppy wheat ale is a great summertime crusher brewed with white malted wheat and Citra. Simoe, Galaxy, Mosaic and Nelson hops. Cellarmaker Warning;you may encounter charts and the disruption of the Status Quo.", country: "San Francisco, California, United States", style:"Wheat Ale", image:"https://res.cloudinary.com/ratebeer/image/upload/e_trim:1/d_beer_img_default.png,f_auto/beer_280765")
 p "SEEDED BEERS DATA"
+
+Guide.destroy_all
+Guide.create(title: "John's review", description:"I love brewing my own beers.", image:"https://cdn2us.denofgeek.com/sites/denofgeekus/files/styles/main_wide/public/2019/01/jeff-bridges-dude-big-lebowski.jpg?itok=zPqud1Gy")
+Guide.create(title: "Jesus's review", description:"Let there be beer.", image:"https://www.testifygod.org/wp-content/uploads/2018/08/Lord-Jesus.jpg")
+
+p "SEEDED GUIDES DATA"
 
