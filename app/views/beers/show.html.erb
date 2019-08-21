@@ -361,23 +361,22 @@
 </div>
 <br />
 
+<div class="card mb-3" style="max-width: 600px">
+  <div class="row no-gutters">
+    <div class="col-md-10">
+      <div class="card-body">
+        <h5 class="card-title"><%= @beer.title %></h5>
+        <p class="card-text"><small class="text-muted"><%= @beer.style %></small>
+        <p class="card-text"><small class="text-muted"><%= @beer.country %></small>
+        <p class="card-text"><%= @beer.description %></p>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <img class="card-img" style="height:250px; width:70px; margin:10px" src=<%= @beer.image %> alt="...">
+    </div>
+  </div>
+</div>
 
 
-
-<h1>Craft Beer</h1>
-<%= image_tag 'craftbeer.jpg' %>
-
-<% @beers.each do |beer| %>
-    <p>
-        <h3>Name: <%= beer.title %></h3>
-        <ul>
-        <li><h4><%= beer.description %></h4>
-        <li><h4>This beer's is from <%= beer.country %></h4>
-        <li><h4>This beer's style is <%= beer.style %></h4>
-        <li><img src=<%= beer.image %> style ="height:100px; width:60px;">
-        </ul>
-    </p>
-    <br/>
-<%end %>
 
 </html>
