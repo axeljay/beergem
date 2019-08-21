@@ -232,6 +232,20 @@
 			display: block;
 		}
 	}
+
+    .figure {
+      position: relative;
+    }
+
+  .caption  {
+    color: white;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    width: 100%;
+    font-size: 600%;
+  }
+
 </style>
 <script type="text/javascript">
 	// Prevent dropdown menu from closing when click inside the form
@@ -330,32 +344,46 @@
 </nav>
 </body>
 
-
-<h1>This is a guide page!</h1>
 <br />
 
 <div class="container">
 <img src="<%=image_url("craftbeer.jpg") %>" class="img-fluid" alt="Responsive image">
 </div>
 <br />
+<br />
+<h1 style="text-align: center;">Top 10 beers</h1>
+<!-- Containers for IPA, PALE ALE & STOUTS -->
+<div class="container">
+  <div class="row">
 
+    <div class="col-sm">
+      <figure class="figure">
+        <img src="<%=image_url("ipa.jpg") %>" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+        <figcaption class="figure-caption"></figcaption>
+        <div class="caption">
+        <p>IPA</p>
+        </div>
+      </figure>
+    </div>
 
+    <div class="col-sm">
+      <figure class="figure">
+        <img src="<%=image_url("lager.jpg") %>" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+        <figcaption class="figure-caption"></figcaption>
+        <div class="caption">
+        <p>Lager</p>
+    </figure>
+    </div>
 
-
-<h1>Craft Beer</h1>
-<%= image_tag 'craftbeer.jpg' %>
-
-<% @beers.each do |beer| %>
-    <p>
-        <h3>Name: <%= beer.title %></h3>
-        <ul>
-        <li><h4><%= beer.description %></h4>
-        <li><h4>This beer's is from <%= beer.country %></h4>
-        <li><h4>This beer's style is <%= beer.style %></h4>
-        <li><img src=<%= beer.image %> style ="height:100px; width:60px;">
-        </ul>
-    </p>
-    <br/>
-<%end %>
+    <div class="col-sm">
+      <figure class="figure">
+        <img src="<%=image_url("stout.jpg") %>" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+        <figcaption class="figure-caption"></figcaption>
+        <div class="caption">
+        <p>Stout</p>
+      </figure>
+    </div>
+  </div>
+</div>
 
 </html>
