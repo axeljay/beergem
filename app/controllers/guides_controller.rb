@@ -7,10 +7,12 @@ before_action :authenticate_user!, :except => [ :show, :index ]
 
   def show
     @guide = Guide.find(params[:id])
+
   end
 
   def new
     @guides = Guide.all
+    @users = User.all
   end
 
   def edit
@@ -22,7 +24,7 @@ before_action :authenticate_user!, :except => [ :show, :index ]
     @guide.user = current_user
     @guide.save
 
-    redirect_to guide_path(@guide)
+    redirect_to guides_path(@guide)
   end
 
   def update
