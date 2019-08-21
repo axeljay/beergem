@@ -282,7 +282,6 @@
 			</li>
 		</ul>
 
-
 			<form class="navbar-form form-inline">
 				<div class="input-group search-box">
 					<input type="text" id="search" class="form-control" placeholder="Search here...">
@@ -290,17 +289,32 @@
 				</div>
 			</form>
 
+
+
+
+
+
+
+
 			<ul class="nav navbar-nav navbar-right ml-auto">
-				<% if user_signed_in? %>
-						<li class="nav-item">
-							 <%= link_to 'Log Out', destroy_user_session_url, method: :delete, class:"btn btn-primary get-started-btn mt-1 mb-1" %>
-						</li>
-				<% else%>
-						<li class="nav-item">
-							 <%= link_to 'Log In', new_user_session_url,class:"btn btn-primary get-started-btn mt-1 mb-1" %>
-						</li>
-				<% end %>
-		</ul>
+					<% if user_signed_in? %>
+							<li class="nav-item">
+					       <%= link_to 'Log Out', destroy_user_session_url, method: :delete, class:"btn btn-primary get-started-btn mt-1 mb-1" %>
+							</li
+					<% else%>
+							<li class="nav-item">
+					       <%= link_to 'Log In', new_user_session_url,class:"btn btn-primary get-started-btn mt-1 mb-1" %>
+							</li>
+					<% end %>
+			</ul>
+
+
+
+
+
+
+
+
 		<!-- <ul class="nav navbar-nav navbar-right ml-auto">
 			<li class="nav-item">
 <<<<<<< HEAD
