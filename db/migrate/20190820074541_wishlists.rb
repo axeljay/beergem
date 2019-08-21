@@ -4,7 +4,8 @@ class Wishlists < ActiveRecord::Migration[5.2]
     t.string :title
     t.text :description
     t.references :beer
+    t.references :user
 
    end
-  end
+end
 end
