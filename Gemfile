@@ -2,11 +2,13 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
+
 gem 'devise'
 
 gem 'bootstrap', '~> 4.3.1'
 
 gem 'autoprefixer-rails'
+
 gem 'jquery-rails'
 
 
