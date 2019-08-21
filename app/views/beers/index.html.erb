@@ -362,7 +362,6 @@
 <div class="container">
 <br>  <h2 class="text-center">Showing a list of our craftbeers </h2>
 <hr>
-
 <div class="row">
 	<aside class="col-sm-4">
 
@@ -449,7 +448,9 @@
 				</form>
 				</div> <!-- card-body.// -->
 			</div>
-		</article> <!-- card-group-item.// -->
+		</article>
+</div>
+</div> <!-- card-group-item.// -->
 
 
 
@@ -486,7 +487,7 @@
 		<!-- </div> -->
 	<!-- </article> <!-- card-group-item.// -->
 <!-- </div> <!-- card.// -->
-
+<div style="display:inline-block; width:620px; margin:10px; border:2px solid red">
 <% @beers.each do |beer| %>
     <div class="card mb-3" style="max-width: 600px">
         <a style="color:inherit; text-decoration:inherit" href=<%=beer_path(beer.id)%>>
@@ -506,6 +507,6 @@
         </a>
     </div>
 <%end %>
-
+</div>
 
 </html>
