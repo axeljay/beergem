@@ -4,6 +4,7 @@ class Beers < ActiveRecord::Migration[5.2]
     t.string :title
     t.text :description
     t.string :country
+    t.string :region
     t.string :style
     t.string :image
   end
