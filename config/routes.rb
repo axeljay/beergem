@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   resources :users
   resources :wishlist
   resources :guides
+  resources :ipas
 
 end
