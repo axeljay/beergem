@@ -299,7 +299,7 @@
   <div class="row">
     <div class="col">
       <h2>Edit Guide</h2>
-
+			<% if user_signed_in? %>
       <%= form_with scope: :guide, model: @guide, local: true do |form| %>
 
 
@@ -329,6 +329,7 @@
       </div>
         <%= form.submit :class=>'btn btn-primary' %>
       <% end %>
+     <% end %>
     </div>
   </div>
 

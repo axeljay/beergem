@@ -313,6 +313,7 @@
                         <p class="card-text"><%= guide.description %></p>
                     </div>
                 </div>
+               			<% if user_signed_in? %>
                 	<%= link_to 'Edit',
              edit_guide_path(guide),
              method: :get %>
@@ -320,6 +321,7 @@
              guide_path(guide),
                          method: :delete,
                          data: { confirm: 'Are you sure?' } %>
+                     <% end %>
             </div>
         </a>
     </div>
