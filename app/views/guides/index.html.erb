@@ -59,7 +59,11 @@
 
 <h1>This is a guide/index page!</h1>
 <br />
+               			<% if user_signed_in? %>
 
+  <%= link_to "Add New Guide ", new_guide_path, class:"btn btn-primary mb-3" %>
+               			<% end %>
+<br />
 <br />
 <div class="container">
 <div class = "guide">
