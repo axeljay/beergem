@@ -300,6 +300,7 @@
 <br />
 
 <div class = "guide">
+
 <% @guides.each do |guide| %>
     <p>
     	  <img src=<%= guide.image %> style ="height:100px; width:150px;">
@@ -307,9 +308,11 @@
 
         <p><%= guide.description %> </p>
 
+	<%= link_to 'Delete',
+             guide_path(guide),
+                         method: :delete,
+                         data: { confirm: 'Are you sure?' } %>
     </p>
     <br/>
 <%end %>
 </div>
-
-</html>
