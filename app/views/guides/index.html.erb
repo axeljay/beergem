@@ -61,19 +61,19 @@
 <br />
 
 <br />
-
+<div class="container">
 <div class = "guide">
-<div style="display:inline-block; width:350px; margin:10px; border:2px solid red">
+<div style="display:inline-block; width:350px; margin:10px">
 <% @guides.each do |guide| %>
      <div class="card">
-                    <img class="card-img-top" style=" object-fit: cover" src=<%= guide.image %> alt="...">
+                    <img class="card-img-top" style=" object-fit: contain ; width: 200px; height: 200px; display:block; margin-left:auto; margin-right:auto"  src=<%= guide.image %> alt="...">
 
     <div class="card-body" style="max-width: 600px">
         <a style="color:inherit; text-decoration:inherit" href=<%=guide_path(guide.id)%>>
             <div class="row no-gutters">
                     <div class="card-body">
-                        <h3 class="card-title"><%= guide.title %></h3>
-                        <p class="card-text"><%= guide.description %></p>
+                        <p class="card-title"></p><p>Name: <%= guide.title %></p>
+                        <p class="card-text"></p><p>Description: <%= guide.description %></p>
                     </div>
                 </div>
                			<% if user_signed_in? %>
@@ -89,5 +89,6 @@
         </a>
     </div>
 <%end %>
+</div>
 </div>
 </div>
