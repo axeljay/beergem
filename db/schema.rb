@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2019_08_21_060425) do
     t.string "title"
     t.text "description"
     t.string "country"
+    t.string "region"
     t.string "style"
     t.string "image"
     t.bigint "user_id"
@@ -49,7 +50,9 @@ ActiveRecord::Schema.define(version: 2019_08_21_060425) do
     t.string "title"
     t.text "description"
     t.bigint "beer_id"
+    t.bigint "user_id"
     t.index ["beer_id"], name: "index_wishlists_on_beer_id"
+    t.index ["user_id"], name: "index_wishlists_on_user_id"
   end
 
   add_foreign_key "beers", "users"
