@@ -166,12 +166,13 @@
                     <div class="card-body">
                         <h5 class="card-title"><%= beer.title %></h5>
                         <p class="card-text"><small class="text-muted"><%= beer.style %></small></p>
+                        <p class="card-text"><small class="text-muted"><%= beer.region %></small></p>
                         <p class="card-text"><small class="text-muted"><%= beer.country %></small></p>
                         <p class="card-text"><%= beer.description %></p>
                     </div>
                 </div>
                 <div class="col-md-2">
-                    <img class="card-img" style="height:250px; width: 70px; margin:10px; display: block; margin: 0 auto" src=<%= beer.image %> alt="...">
+                    <img class="card-img" style="height:250px; width:70px; margin:10px" src=<%= beer.image %> alt="...">
                 </div>
             </div>
         </a>
