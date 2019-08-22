@@ -5,7 +5,7 @@
 		e.stopPropagation();
 	});
 </script>
-</head>
+
 <body>
 <nav class="navbar navbar-default navbar-expand-lg navbar-light">
 	<div class="navbar-header d-flex col">
@@ -57,13 +57,14 @@
 </body>
 
 
-<h1>This is a guide/index page!</h1>
-<br />
-               			<% if user_signed_in? %>
 
+	<div class=container>
+		<h1>This is a guide/index page!</h1>
+		<br />
+  <% if user_signed_in? %>
   <%= link_to "Add New Guide ", new_guide_path, class:"btn btn-primary mb-3" %>
-               			<% end %>
-<br />
+	<% end %>
+	</div>
 <br />
 <div class="container">
 <div class = "guide">
@@ -75,19 +76,21 @@
     <div class="card-body" style="max-width: 600px">
         <a style="color:inherit; text-decoration:inherit" href=<%=guide_path(guide.id)%>>
             <div class="row no-gutters">
-                    <div class="card-body">
-                        <p class="card-title"></p><p>Name: <%= guide.title %></p>
-                        <p class="card-text"></p><p>Description: <%= guide.description %></p>
-                    </div>
+                <div class="card-body">
+                  <p class="card-title"></p><p>Name: <%= guide.title %></p>
+                  <p class="card-text"></p><p>Description: <%= guide.description %></p>
                 </div>
+            </div>
                			<% if user_signed_in? %>
                 	<%= link_to 'Edit',
              edit_guide_path(guide),
-             method: :get %>
+             method: :get,
+						 class:"btn btn-primary1 mb-3"%>
                 	<%= link_to 'Delete',
              guide_path(guide),
-                         method: :delete,
-                         data: { confirm: 'Are you sure?' } %>
+             method: :delete,
+						 class:"btn btn-primary1 mb-3",
+             data: { confirm: 'Are you sure?' } %>
                      <% end %>
             </div>
         </a>
