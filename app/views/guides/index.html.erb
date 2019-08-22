@@ -300,19 +300,29 @@
 <br />
 
 <div class = "guide">
-
+<div style="display:inline-block; width:350px; margin:10px; border:2px solid red">
 <% @guides.each do |guide| %>
-    <p>
-    	  <img src=<%= guide.image %> style ="height:100px; width:150px;">
-        <h3><%= guide.title %></h3>
+     <div class="card">
+                    <img class="card-img-top" style=" object-fit: cover" src=<%= guide.image %> alt="...">
 
-        <p><%= guide.description %> </p>
-
-	<%= link_to 'Delete',
+    <div class="card-body" style="max-width: 600px">
+        <a style="color:inherit; text-decoration:inherit" href=<%=guide_path(guide.id)%>>
+            <div class="row no-gutters">
+                    <div class="card-body">
+                        <h3 class="card-title"><%= guide.title %></h3>
+                        <p class="card-text"><%= guide.description %></p>
+                    </div>
+                </div>
+                	<%= link_to 'Edit',
+             edit_guide_path(guide),
+             method: :get %>
+                	<%= link_to 'Delete',
              guide_path(guide),
                          method: :delete,
                          data: { confirm: 'Are you sure?' } %>
-    </p>
-    <br/>
+            </div>
+        </a>
+    </div>
 <%end %>
+</div>
 </div>
