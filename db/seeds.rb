@@ -40,9 +40,3 @@ Beer.create(title: "Lawson's Finest Chinookerd", description: "Limited release! 
 Beer.create(title: "Port Brewing Wipeout", description: "With 78 IBUs. Our version of a West Coast IPA- brewed in the San Diego style. This massively hoppy beer gets its flavor and attitude from no less than five hop varieties including Amarillo, Centennial, Cascade, Simcoe and Summit.", country: "San Marcos, California, United States", style:"IPA", image:"https://res.cloudinary.com/ratebeer/image/upload/e_trim:1/d_beer_img_default.png,f_auto/beer_14434")
 p "SEEDED BEERS DATA"
 
-Guide.destroy_all
-Guide.create(title: "John's review", description:"I love brewing my own beers.", image:"https://cdn2us.denofgeek.com/sites/denofgeekus/files/styles/main_wide/public/2019/01/jeff-bridges-dude-big-lebowski.jpg?itok=zPqud1Gy")
-Guide.create(title: "Jesus's review", description:"Let there be beer.", image:"https://www.testifygod.org/wp-content/uploads/2018/08/Lord-Jesus.jpg")
-
-p "SEEDED GUIDES DATA"
-
