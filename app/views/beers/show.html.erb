@@ -275,7 +275,6 @@
 			</div>
 		</form>
 
-
 		<ul class="nav navbar-nav navbar-right ml-auto">
 				<% if user_signed_in? %>
 						<li class="nav-item">
@@ -288,11 +287,6 @@
 				<% end %>
 		</ul>
 
-
-
-
-
-
 		<ul class="nav navbar-nav navbar-right ml-auto">
 				<% if user_signed_in? %>
 						<li class="nav-item">
@@ -304,33 +298,32 @@
 						</li>
 				<% end %>
 		</ul>
-
-			</li>
-		</ul>
 	</div>
 </nav>
 </body>
 
-<h1>This is a guide page!</h1>
-<br />
-
 <div class="container">
+	<h1>This is a beer/show page!</h1>
+	<br />
 <img src="<%=image_url("craftbeer.jpg") %>" class="img-fluid" alt="Responsive image">
 </div>
 <br />
 
-<div class="card mb-3" style="max-width: 600px">
-  <div class="row no-gutters">
-    <div class="col-md-10">
-      <div class="card-body">
-        <h5 class="card-title"><%= @beer.title %></h5>
-        <p class="card-text"><small class="text-muted"><%= @beer.style %></small>
-        <p class="card-text"><small class="text-muted"><%= @beer.country %></small>
-        <p class="card-text"><%= @beer.description %></p>
-      </div>
-    </div>
-    <div class="col-md-2">
-      <img class="card-img" style="height:250px; width:70px; margin:10px" src=<%= @beer.image %> alt="...">
-    </div>
-  </div>
+<div class="container">
+	<div class="card mb-3" style="max-width: 600px">
+	  <div class="row no-gutters">
+  	  <div class="col-md-10">
+    	  <div class="card-body">
+      	  <h5 class="card-title"><%= @beer.title %></h5>
+		        <p class="card-text"><small class="text-muted"><%= @beer.style %></small>
+		        <p class="card-text"><small class="text-muted"><%= @beer.country %></small>
+		        <p class="card-text"><%= @beer.description %></p>
+    	  </div>
+  	  </div>
+
+  	  <div class="col-md-2">
+    	  <img class="card-img" style="height:250px; width:70px; margin:10px" src=<%= @beer.image %> alt="...">
+  	  </div>
+	  </div>
+	</div>
 </div>

@@ -308,14 +308,12 @@
 
 <br />
 
-
-
 <div class="container">
 <br>  <h2 class="text-center">Showing a list of our craftbeers </h2>
-<hr>
+
+<br>
 <div class="row">
 	<aside class="col-sm-4">
-
 
 <!-- CATEGORY -->
 <div class="card">
@@ -327,6 +325,13 @@
 		<div class="filter-content">
 			<div class="card-body">
 			<form>
+				<label class="form-check">
+				  <input class="form-check-input" type="checkbox" value="">
+				  <span class="form-check-label">
+				    All Beers
+				  </span>
+				</label> <!-- form-check.// -->
+
 				<label class="form-check">
 				  <input class="form-check-input" type="checkbox" value="">
 				  <span class="form-check-label">
@@ -405,7 +410,7 @@
 
 
 
-<div style="display:inline-block; width:620px; margin:10px; border:2px solid red">
+<div style="display:inline-block; width:620px; margin:10px;">
 <% @beers.each do |beer| %>
     <div class="card mb-3" style="max-width: 600px">
         <a style="color:inherit; text-decoration:inherit" href=<%=beer_path(beer.id)%>>
