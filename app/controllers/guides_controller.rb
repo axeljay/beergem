@@ -1,8 +1,9 @@
 class GuidesController < ApplicationController
-before_action :authenticate_user!, :except => [ :show, :index ]
+before_action :authenticate_user!
 
   def index
-    @guides = Guide.all
+    @guides = Guide.select {|guide| guide.user_id == current_user.id}
+
   end
 
   def show
