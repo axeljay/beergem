@@ -1,8 +1,10 @@
 class GuidesController < ApplicationController
 before_action :authenticate_user!
 
+# This enables users to only view his own beer and not others
   def index
     @guides = Guide.select {|guide| guide.user_id == current_user.id}
+
 
   end
 
