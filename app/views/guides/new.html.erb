@@ -55,39 +55,39 @@
 </nav>
 </body>
 
+<div class="container">
+	<h1>This is a guide/new page!</h1>
+	<br />
+				<% if user_signed_in? %>
 
-<h1>This is a guide/new page!</h1>
-<br />
-			<% if user_signed_in? %>
+	      <%= form_with scope: :guide, url: guides_path, local: true do |form| %>
 
-      <%= form_with scope: :guide, url: guides_path, local: true do |form| %>
-
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text">Title</span>
-          </div>
-          <%= form.text_field :title, class:"form-control" %>
-        </div>
+	        <div class="input-group mb-3">
+	          <div class="input-group-prepend">
+	            <span class="input-group-text">Title</span>
+	          </div>
+	          <%= form.text_field :title, class:"form-control" %>
+	        </div>
 
 
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text">Text</span>
-          </div>
-          <%= form.text_area :description, class:"form-control" %>
-        </div>
-            <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text">Image</span>
-          </div>
-          <%= form.text_field :image, class:"form-control" %>
-        </div>
-        </div>
-        <%= form.submit :class=>'btn btn-primary' %>
-      <% end %>
-     <% end %>
-    </div>
-  </div>
+	        <div class="input-group mb-3">
+	          <div class="input-group-prepend">
+	            <span class="input-group-text">Text</span>
+	          </div>
+	          <%= form.text_area :description, class:"form-control" %>
+	        </div>
+	            <div class="input-group mb-3">
+	          <div class="input-group-prepend">
+	            <span class="input-group-text">Image</span>
+	          </div>
+	          <%= form.text_field :image, class:"form-control" %>
+	        </div>
+	        </div>
+	        <%= form.submit :class=>'btn btn-primary' %>
+	      <% end %>
+	     <% end %>
+	    </div>
+	  </div>
+	</div>
 </div>
-
 <br />
