@@ -19,3 +19,4 @@
 // = require bootstrap-sprockets
 //
 // = require bootstrap
+// = require filter
