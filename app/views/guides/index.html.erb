@@ -56,10 +56,8 @@
 </nav>
 </body>
 
-
-
 	<div class=container>
-		<h1>This is the guide to beer page.</h1>
+		<h1>This are the beers that I have tried.</h1>
 		<br />
   <% if user_signed_in? %>
   <%= link_to "Add New Guide ", new_guide_path, class:"btn btn-primary mb-3" %>
@@ -74,7 +72,8 @@
 <% @guides.each do |guide| %>
     <div class="card">
     <img class="card-img-top" style=" object-fit: contain ; width: 200px; height: 200px; display:block; margin-left:auto; margin-right:auto"  src=<%= guide.image %> alt="...">
-    <div class="card-body" style="max-width: 600px">
+
+	  <div class="card-body" style="max-width: 600px">
         <a style="color:inherit; text-decoration:inherit" href=<%=guide_path(guide.id)%>>
             <div class="row no-gutters">
                 <div class="card-body">
@@ -87,6 +86,7 @@
              edit_guide_path(guide),
              method: :get,
 						 class:"btn btn-primary1 mb-3"%>
+
                 	<%= link_to 'Delete',
              guide_path(guide),
              method: :delete,

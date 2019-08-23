@@ -151,24 +151,24 @@
         width: 47%;
         text-decoration: none;
     }
-    .navbar .social-btn .btn-primary {
-        background: #507cc0;
-    }
-    .navbar .social-btn .btn-primary:hover {
-        background: #4676bd;
-    }
-    .navbar .social-btn .btn-info {
-        background: #64ccf1;
-    }
-    .navbar .social-btn .btn-info:hover {
-        background: #4ec7ef;
-    }
-    .navbar .social-btn .btn i {
-        margin-right: 5px;
-        font-size: 16px;
-        position: relative;
-        top: 2px;
-    }
+    // .navbar .social-btn .btn-primary {
+    //     background: #507cc0;
+    // }
+    // .navbar .social-btn .btn-primary:hover {
+    //     background: #4676bd;
+    // }
+    // .navbar .social-btn .btn-info {
+    //     background: #64ccf1;
+    // }
+    // .navbar .social-btn .btn-info:hover {
+    //     background: #4ec7ef;
+    // }
+    // .navbar .social-btn .btn i {
+    //     margin-right: 5px;
+    //     font-size: 16px;
+    //     position: relative;
+    //     top: 2px;
+    // }
     .navbar .form-wrapper .form-footer {
         text-align: center;
         padding-top: 10px;
@@ -243,7 +243,7 @@
       border-radius: 10px;
       width:40%;
       margin-right: 20px;
-      }
+}
 
   .caption  {
     color: white;
@@ -265,6 +265,13 @@
     text-align: center;
   }
 
+.loginbody  {
+ background: gold; width: auto;
+ padding-bottom: 50%;
+ padding-top: 20%;
+
+}
+
   .Lager {
     background-color: #ffe6a1;
   }
@@ -280,3 +287,4 @@
   .Wheat {
     background-color: #ffe240;
   }
+
