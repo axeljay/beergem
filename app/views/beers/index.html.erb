@@ -64,7 +64,7 @@
 <br>  <h2 class="text-center">Showing a list of our craftbeers </h2>
 
 <br>
-<div style="width:1100px; margin: 0 auto">
+<div style="width:1100px; margin: 0 auto; border: 2px solid green">
 <div style="width: 300px; display: inline-block">
 <div class="row">
 	<aside class="col-sm-12">
@@ -80,21 +80,21 @@
 			<div class="card-body">
 			<form>
 				<label class="form-check">
-				  <input class="form-check-input" type="checkbox" value="">
+				  <input class="form-check-input" id="ipacheck" type="checkbox" value="" checked>
 				  <span class="form-check-label">
 				    IPA
 				  </span>
 				</label> <!-- form-check.// -->
 
 				<label class="form-check">
-				  <input class="form-check-input" type="checkbox" value="">
+				  <input class="form-check-input" id="lagercheck" type="checkbox" value="" checked>
 				  <span class="form-check-label">
 				    Lager
 				  </span>
 				</label>  <!-- form-check.// -->
 
 				<label class="form-check">
-				  <input class="form-check-input" type="checkbox" value="">
+				  <input class="form-check-input" id="stoutcheck" type="checkbox" value="" checked>
 				  <span class="form-check-label">
 				    Stout
 				  </span>
@@ -103,7 +103,7 @@
 			</div> <!-- card-body.// -->
 		</div>
 	</article> <!-- card-group-item.// -->
-
+</div>
 	<!-- REGIONS -->
 	<div class="card">
 		<article class="card-group-item">
@@ -155,11 +155,10 @@
 </div>
 </div> <!-- card-group-item.// -->
 </div>
-</div>
 
-<div style="display:inline-block; width:620px; float:right; margin: 0 80px">
+<div style="display:inline-block; width:620px; float:right; margin: 0 80px; border: 2px solid blue">
 <% @beers.each do |beer| %>
-    <div class="card mb-3" style="max-width: 600px">
+    <div class="card mb-3 <%= beer.style %>" style="max-width: 600px">
         <a style="color:inherit; text-decoration:inherit" href=<%=beer_path(beer.id)%>>
             <div class="row no-gutters">
                 <div class="col-md-10">
