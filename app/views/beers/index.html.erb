@@ -115,35 +115,35 @@
 				<div class="card-body">
 				<form>
 					<label class="form-check">
-					  <input class="form-check-input" type="checkbox" value="">
+					  <input class="form-check-input" id="northcheck" type="checkbox" value="" checked>
 					  <span class="form-check-label">
 					    North America
 					  </span>
 					</label> <!-- form-check.// -->
 
 					<label class="form-check">
-					  <input class="form-check-input" type="checkbox" value="">
+					  <input class="form-check-input" id="southcheck" type="checkbox" value="" checked>
 					  <span class="form-check-label">
 					    South America
 					  </span>
 					</label>  <!-- form-check.// -->
 
 					<label class="form-check">
-					  <input class="form-check-input" type="checkbox" value="">
+					  <input class="form-check-input" id="europecheck" type="checkbox" value="" checked>
 					  <span class="form-check-label">
 					    Europe
 					  </span>
 					</label>  <!-- form-check.// -->
 
 					<label class="form-check">
-					  <input class="form-check-input" type="checkbox" value="">
+					  <input class="form-check-input" id="asiacheck" type="checkbox" value="" checked>
 					  <span class="form-check-label">
 					    Asia
 					  </span>
 					</label>  <!-- form-check.// -->
 
 					<label class="form-check">
-					  <input class="form-check-input" type="checkbox" value="">
+					  <input class="form-check-input" id="oceaniacheck" type="checkbox" value="" checked>
 					  <span class="form-check-label">
 					    Oceania
 					  </span>
@@ -158,7 +158,7 @@
 
 <div style="display:inline-block; width:620px; float:right; margin: 0 80px; border: 2px solid blue">
 <% @beers.each do |beer| %>
-    <div class="card mb-3 <%= beer.style %>" style="max-width: 600px">
+    <div class="card mb-3 <%= beer.style %> <%= beer.region %>" style="max-width: 600px">
         <a style="color:inherit; text-decoration:inherit" href=<%=beer_path(beer.id)%>>
             <div class="row no-gutters">
                 <div class="col-md-10">
@@ -181,6 +181,96 @@
 
 </div>
 
+<script>
+    const ipaCheckBox = document.getElementById("ipacheck");
+    const ipaCards = document.querySelectorAll("div.IPA");
+
+    const lagerCheckBox = document.getElementById("lagercheck");
+    const lagerCards = document.querySelectorAll("div.Lager");
+
+    const stoutCheckBox = document.getElementById("stoutcheck");
+    const stoutCards = document.querySelectorAll("div.Stout");
+
+    const northCheckBox = document.getElementById("northcheck");
+    const northCards = document.querySelectorAll("div.North");
+
+    const southCheckBox = document.getElementById("southcheck");
+    const southCards = document.querySelectorAll("div.South");
+
+    const europeCheckBox = document.getElementById("europecheck");
+    const europeCards = document.querySelectorAll("div.Europe");
+
+    const asiaCheckBox = document.getElementById("asiacheck");
+    const asiaCards = document.querySelectorAll("div.Asia");
+
+    const oceaniaCheckBox = document.getElementById("oceaniacheck");
+    const oceaniaCards = document.querySelectorAll("div.Oceania");
+
+    function removeIPA () {
+        for (i = 0; i < ipaCards.length; i++) {
+          ipaCards[i].style.display = "none";
+        };
+        ipaCheckBox.style.display = "none";
+    };
+
+    function removeLager () {
+        for (i = 0; i < lagerCards.length; i++) {
+          lagerCards[i].style.display = "none";
+        };
+        lagerCheckBox.style.display = "none";
+    };
+
+    function removeStout () {
+        for (i = 0; i < stoutCards.length; i++) {
+          stoutCards[i].style.display = "none";
+        };
+        stoutCheckBox.style.display = "none";
+    };
+
+    function removeNorth () {
+        for (i = 0; i < northCards.length; i++) {
+          northCards[i].style.display = "none";
+        };
+        northCheckBox.style.display = "none";
+    };
+
+    function removeSouth () {
+        for (i = 0; i < southCards.length; i++) {
+          southCards[i].style.display = "none";
+        };
+        southCheckBox.style.display = "none";
+    };
+
+    function removeEurope () {
+        for (i = 0; i < europeCards.length; i++) {
+          europeCards[i].style.display = "none";
+        };
+        europeCheckBox.style.display = "none";
+    };
+
+    function removeAsia () {
+        for (i = 0; i < asiaCards.length; i++) {
+          asiaCards[i].style.display = "none";
+        };
+        asiaCheckBox.style.display = "none";
+    };
+
+    function removeOceania () {
+        for (i = 0; i < oceaniaCards.length; i++) {
+          oceaniaCards[i].style.display = "none";
+        };
+        oceaniaCheckBox.style.display = "none";
+    };
+
+    ipaCheckBox.addEventListener("click", removeIPA);
+    lagerCheckBox.addEventListener("click", removeLager);
+    stoutCheckBox.addEventListener("click", removeStout);
+    northCheckBox.addEventListener("click", removeNorth);
+    southCheckBox.addEventListener("click", removeSouth);
+    europeCheckBox.addEventListener("click", removeEurope);
+    asiaCheckBox.addEventListener("click", removeAsia);
+    oceaniaCheckBox.addEventListener("click", removeOceania);
+</script>
 
 
 </html>
