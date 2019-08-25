@@ -7,11 +7,15 @@ Rails.application.routes.draw do
 
   root :to => "home#index"
 
+  resources :beers do
+    resources :reviews
+  end
+
   resources :home
-  resources :beers
   resources :users
   resources :wishlist
   resources :guides
   resources :ipas
+
 
 end
