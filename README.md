@@ -1,24 +1,16 @@
-# README
+# Beergem
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Technologies used
 
-Things you may want to cover:
+General approach taken
 
-* Ruby version
 
-* System dependencies
+Installation instructions
 
-* Configuration
+Link to user stories
+https://docs.google.com/presentation/d/16eGMi8nq0erGHtmI-fV0NJLo3dY2de6cmOX04SWnztk/edit?usp=sharing
 
-* Database creation
+Link to your wireframes
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Unsolved problems
