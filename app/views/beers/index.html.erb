@@ -64,7 +64,7 @@
 <br>  <h2 class="text-center">Showing a list of our craftbeers </h2>
 
 <br>
-<div style="width:1100px; margin: 0 auto; border: 2px solid green">
+<div style="width:1100px; margin: 0 auto">
 <div style="width: 300px; display: inline-block">
 <div class="row">
 	<aside class="col-sm-12">
@@ -156,7 +156,7 @@
 </div> <!-- card-group-item.// -->
 </div>
 
-<div style="display:inline-block; width:620px; float:right; margin: 0 80px; border: 2px solid blue">
+<div style="display:inline-block; width:620px; float:right; margin: 0 80px">
 <% @beers.each do |beer| %>
     <div class="card mb-3 <%= beer.style %> <%= beer.region %>" style="max-width: 600px">
         <a style="color:inherit; text-decoration:inherit" href=<%=beer_path(beer.id)%>>
