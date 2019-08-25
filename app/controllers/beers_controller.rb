@@ -5,6 +5,10 @@ class BeersController < ApplicationController
     @beers = Beer.all
   end
 
+  def search
+    @beers = Beer.where("style LIKE ?", "%" + params[:q] + "%")
+  end
+
   def show
     @beer = Beer.find(params[:id])
 
