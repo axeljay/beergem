@@ -1,10 +1,10 @@
 # Beergem
 ![https://www.reactiongifs.com/wp-content/uploads/2013/07/beer.gif](https://www.reactiongifs.com/wp-content/uploads/2013/07/beer.gif)
--This is a collaborative Ruby on Rails project.
--The purpose of this project was to practice working as a team on a single github repository.
+- This is a collaborative Ruby on Rails project.
+- The purpose of this project was to practice working as a team on a single github repository.
 
 #### Technologies used
--Ruby on Rails version 2.6.3
+- Ruby on Rails version 2.6.3
 
 #### General approach taken
 
