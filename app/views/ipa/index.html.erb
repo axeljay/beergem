@@ -5,7 +5,7 @@
 		e.stopPropagation();
 	});
 </script>
-</head>
+
 <body>
 <nav class="navbar navbar-default navbar-expand-lg navbar-light">
 	<div class="navbar-header d-flex col">
@@ -56,3 +56,25 @@
 <div class="topic">
 <h1>Top 3 IPA of the month</h1>
 </div>
+
+<div class="topbeer">
+<% @beers.each do |beer| %>
+<div class="card mb-3 <%= beer.style %> <%= beer.region %>" style="max-width: 600px">
+		<a style="color:inherit; text-decoration:inherit" href=<%=beer_path(beer.id)%>>
+			<div class="row no-gutters">
+				<div class="col-md-10">
+					<div class="card-body">
+						<h5 class="card-title"><%= beer.title %></h5>
+							<p class="card-text"><small class="text-muted"><%= beer.style %></small></p>
+							<p class="card-text"><small class="text-muted"><%= beer.region %></small></p>
+							<p class="card-text"><small class="text-muted"><%= beer.country %></small></p>
+							<p class="card-text"><%= beer.description %></p>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<img class="card-img" style="height:250px; width:70px; margin:10px" src=<%= beer.image %> alt="...">
+				</div>
+			</div>
+</div>
+<%end%>
+</>
