@@ -1,7 +1,8 @@
-class User < ApplicationRecord
-  has_many :beer
-  has_many :wishlist
-  has_many :guide
+class User < ActiveRecord::Base
+  has_many :beers
+  has_many :wishlists
+  has_many :guides
+  has_many :reviews
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,

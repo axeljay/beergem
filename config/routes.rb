@@ -12,8 +12,11 @@ Rails.application.routes.draw do
 
   root :to => "home#index"
 
+  resources :beers do
+    resources :reviews
+  end
+
   resources :home
-  resources :beers
   resources :users
   resources :wishlist
   resources :guides
@@ -21,6 +24,5 @@ Rails.application.routes.draw do
   resources :lager
   resources :stout
   # get "ipa/index" => "ipas#index"
-
-
 end
+

@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
 
+gem 'simple_form'
+
 gem 'devise'
 
 gem 'bootstrap', '~> 4.3.1'
@@ -10,6 +12,8 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'autoprefixer-rails'
 
 gem 'jquery-rails'
+
+gem 'jquery-turbolinks'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

@@ -1,0 +1,35 @@
+<div class = "review" >
+	<div class = "review-rating" data-score =<%= review.rating %> ></div>
+	<p class = "review-comment"> <%= review.comment %> </p>
+
+	<% if user_signed_in? %>
+		<% if review.user_id == current_user.id %>
+			<div class= "links btn-group">
+                	<%= link_to 'Edit',
+             edit_beer_review_path(review.beer, review),
+             method: :get,
+						 class:"btn btn-custom"%>
+
+                	<%= link_to 'Delete',
+             beer_review_path(review.beer, review),
+             method: :delete,
+						 class:"btn btn-custom",
+             data: { confirm: 'Are you sure?' } %>
+
+
+			</div>
+		<% end %>
+	<% end %>
+</div>
+
+<script>
+	$(document).ready(function() {
+    $('.review-rating').raty({
+      readOnly: true,
+      score: function() {
+        return $(this).attr('data-score');
+    },
+      path: '/assets/'
+  });
+   })
+</script>
