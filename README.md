@@ -4,9 +4,9 @@
 - The purpose of this project was to practice working as a team on a single github repository.
 
 ### Our team
-@axeljay
-@samboey
-@yoda14
+1. [Axel Jacob](https://github.com/axeljay)
+2. [Daniel Choo](https://github.com/yoda14)
+3. [Samuel Boey](https://github.com/samboey)
 
 #### Technologies used
 - Ruby on Rails version 2.6.3
