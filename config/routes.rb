@@ -17,6 +17,10 @@ Rails.application.routes.draw do
   resources :users
   resources :wishlist
   resources :guides
-  resources :ipas
+  resources :ipa
+  resources :lager
+  resources :stout
+  # get "ipa/index" => "ipas#index"
+
 
 end

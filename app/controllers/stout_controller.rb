@@ -1,4 +1,4 @@
-class IpaController < ApplicationController
+class StoutController < ApplicationController
 
   before_action :authenticate_user!, :except => [ :show, :index ]
 

@@ -64,7 +64,7 @@
 
 	      <%= form_with scope: :guide, url: guides_path, local: true do |form| %>
 
-	        <div class="input-group mb-3">
+	        <div class="input-group mb-1">
 	          <div class="input-group-prepend">
 	            <span class="input-group-text">Title</span>
 	          </div>
@@ -85,8 +85,9 @@
 	          </div>
 	          <%= form.text_field :image, class:"form-control" %>
 	        </div>
+					<%= form.submit :class=>'btn btn-primary' %>
 	        </div>
-	        <%= form.submit :class=>'btn btn-primary' %>
+
 	      <% end %>
 	     <% end %>
 
