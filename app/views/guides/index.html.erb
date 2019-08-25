@@ -33,22 +33,36 @@
 				</ul>
 			</li>
 		</ul>
-
+<!--
 		<form class="navbar-form form-inline">
 			<div class="input-group search-box">
 				<input type="text" id="search" class="form-control" placeholder="Search here...">
 				<span class="input-group-addon"><i class="material-icons"></i></span>
 			</div>
-		</form>
+		</form> -->
 
 		<ul class="nav navbar-nav navbar-right ml-auto">
+
+
+		<!-- profile link -->
+
+
+
 				<% if user_signed_in? %>
+
+
+					<!-- <div class="profile">
+				  <a href="/users/1" class="btn btn-info" role="button">Profile</a>
+				</div> -->
+
 						<li class="nav-item">
 							 <%= link_to 'Log Out', destroy_user_session_url, method: :delete, class:"btn btn-primary get-started-btn mt-1 mb-1" %>
 						</li>
+
+
 				<% else%>
 						<li class="nav-item">
-							 <%= link_to 'Log In', new_user_session_url,class:"btn btn-primary get-started-btn mt-1 mb-1" %>
+							 <%= link_to 'Log In', new_user_session_url, class:"btn btn-primary get-started-btn mt-1 mb-1" %>
 						</li>
 				<% end %>
 		</ul>
@@ -58,10 +72,10 @@
 
 	<div class=container>
 		<br />
-		<h1>This are the beers that I have tried.</h1>
+		<!-- <h1>This are the beers that I have tried.</h1> -->
 		<br />
 
-	<h3>Welcome  <%= current_user.email %></h3>
+	<h3>Welcome,  <%= current_user.email %>!</h3>
 	<br />
 
   <% if user_signed_in? %>
@@ -87,6 +101,7 @@
                 </div>
             </div>
                			<% if user_signed_in? %>
+
                 	<%= link_to 'Edit',
              edit_guide_path(guide),
              method: :get,

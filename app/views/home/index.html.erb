@@ -35,12 +35,24 @@
 			</li>
 		</ul>
 
-			<form class="navbar-form form-inline">
+
+
+
+			<!-- SEARCH -->
+
+			<!-- <form class="navbar-form form-inline" action="/search" >
 				<div class="input-group search-box">
 					<input type="text" id="search" class="form-control" placeholder="Search here...">
 					<span class="input-group-addon"><i class="material-icons"></i></span>
 				</div>
-			</form>
+			</form> -->
+<!--
+			<form class="form-inline my-2 my-lg-0" action="/search">
+				<input class="form-control mr-sm-2" name="q" type="text" placeholder="Search" aria-label="Search">
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			</form> -->
+
+
 
 			<ul class="nav navbar-nav navbar-right ml-auto">
 					<% if user_signed_in? %>
@@ -64,14 +76,15 @@
 </div>
 <br />
 <br />
-<h1 style="text-align: center;">Top 10 beers</h1>
+<h1 style="text-align: center;">Top 3 beers of the month</h1>
 <!-- Containers for IPA, PALE ALE & STOUTS -->
 <div class="container">
   <div class="row">
 
     <div class="col-sm">
       <figure class="figure">
-        <img src="<%=image_url("ipa.jpg") %>" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+				<a href="/ipa"><img src="<%=image_url("ipa.jpg") %>" class="figure-img img-fluid rounded"></a>
+
         <figcaption class="figure-caption"></figcaption>
         <div class="caption">
         <p>IPA</p>
@@ -81,7 +94,7 @@
 
     <div class="col-sm">
       <figure class="figure">
-        <img src="<%=image_url("lager.jpg") %>" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+				<a href="/lager"><img src="<%=image_url("lager.jpg") %>" class="figure-img img-fluid rounded"></a>
         <figcaption class="figure-caption"></figcaption>
         <div class="caption">
         <p>Lager</p>
@@ -90,7 +103,7 @@
 
     <div class="col-sm">
       <figure class="figure">
-        <img src="<%=image_url("stout.jpg") %>" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+				<a href="/stout"><img src="<%=image_url("stout.jpg") %>" class="figure-img img-fluid rounded"></a>
         <figcaption class="figure-caption"></figcaption>
         <div class="caption">
         <p>Stout</p>
@@ -107,9 +120,9 @@
 <br />
 
 
-<div class="footer">
+<!-- <div class="footer">
 	<br/>
   <p>Footer</p>
-</div>
+</div> -->
 
 </html>

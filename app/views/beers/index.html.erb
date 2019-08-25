@@ -35,12 +35,12 @@
 		</ul>
 
 		<!-- SEARCH BOX -->
-		<form class="navbar-form form-inline">
+		<!-- <form class="navbar-form form-inline">
 			<div class="input-group search-box">
 				<input type="text" id="search" class="form-control" placeholder="Search here...">
 				<span class="input-group-addon"><i class="material-icons"></i></span>
 			</div>
-		</form>
+		</form> -->
 
 				<!-- LOGIN and LOG OUT -->
 		<ul class="nav navbar-nav navbar-right ml-auto">
@@ -61,10 +61,10 @@
 <br />
 
 <div class="container">
-<br>  <h2 class="text-center">Showing a list of our craftbeers </h2>
+<br>  <h2 class="text-center">Craft Beers Listing</h2>
 
 <br>
-<div style="width:1100px; margin: 0 auto; border: 2px solid green">
+<div style="width:1100px; margin: 0 auto">
 <div style="width: 300px; display: inline-block">
 <div class="row">
 	<aside class="col-sm-12">
@@ -148,6 +148,10 @@
 					    Oceania
 					  </span>
 					</label>  <!-- form-check.// -->
+					<div class="reset"
+					<button><a href="/beers">Reset All Selections</a></button>
+					</div>
+
 				</form>
 				</div> <!-- card-body.// -->
 			</div>
@@ -156,7 +160,7 @@
 </div> <!-- card-group-item.// -->
 </div>
 
-<div style="display:inline-block; width:620px; float:right; margin: 0 80px; border: 2px solid blue">
+<div style="display:inline-block; width:620px; float:right; margin: 0 80px">
 <% @beers.each do |beer| %>
     <div class="card mb-3 <%= beer.style %> <%= beer.region %>" style="max-width: 600px">
         <a style="color:inherit; text-decoration:inherit" href=<%=beer_path(beer.id)%>>
@@ -271,6 +275,7 @@
     asiaCheckBox.addEventListener("click", removeAsia);
     oceaniaCheckBox.addEventListener("click", removeOceania);
 </script>
+
 
 
 </html>
