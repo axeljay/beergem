@@ -13,6 +13,8 @@ gem 'autoprefixer-rails'
 
 gem 'jquery-rails'
 
+gem 'jquery-turbolinks'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'

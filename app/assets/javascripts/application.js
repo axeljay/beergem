@@ -20,3 +20,7 @@
 //
 // = require bootstrap
 // = require filter
+//= require jquery
+//= require jquery.raty
+//= require jquery_ujs
+//= require jquery.turbolinks
